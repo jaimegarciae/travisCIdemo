@@ -1,5 +1,5 @@
 language: java
-before_success:
+before_script:
     - bash pull.sh
 after_success:
     - bash push.sh
