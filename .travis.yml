@@ -1,6 +1,6 @@
 language: java
-cache:
-    directories:
-    - .ekstazi
-before_script:
-    - ls
+after_success:
+    - bash push.sh
+env:
+    global:
+        - secure: "WdA3UELNSjnzkzmjUHpRAFG3C/KTe64AkWzkpIDCHTETQvELtuN5+HR+7VfTDmiLqYyU9el/maAad0bS7EPbdwAfv0QfvImYVZ8bV5BU75Sv/3WD0nTZ8uSfSlSv2Uy04XTece50xtEEijNvGyfJvPoAMisQbXMpwZcaTpIY+wz+U2pSSIUjpMAFyBcLDEdFS7jWqmO28rUjzqMT1BHwUiBCQZq8ZkV7t0vEMkXwaQ5sD5lNLUy8KN/rPjjHiS8MqA4Ey+YVZmtZKNTUop9bPNLd58yZhQrEcKdA1njPHfF4N6y5ZyfgRPzuiaYleFLaRbWfofMDVLUqRiYgpCsO+Yk6EgS5/Ou0rduc9HxJ/pA66Tz4JLEVN8fXv+NR+oUWtj9WB1n8JJEcrwdhGBCOv4W/N0jwcTJwV8ED8S2/jCPo3V+VvXRzgC/6fcK27YaRl5TYr7hat7cVBm11afEzwYnfbon7v+f0EmIK7m+NGkCxMj/dUeMa7hRZdIi8BN+t8KPVNaojE6Z0kSLungZz7qgmM3nigsqKS4l/YnWeGAKcRvWroXA2hv1VIL7nRNIsBjJ1IFaQbH8nKTt14iqHXTdGMQebPpuSK/+DrfT4xIuXxcrr1tUF7mSuT/fBbRWRMqjZ/UMUyqeptzT7rGs+OBxbQiQkq+lFnpl7+zHXuA0="
