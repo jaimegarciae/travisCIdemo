@@ -1,4 +1,6 @@
 language: java
+before_success:
+    - bash pull.sh
 after_success:
     - bash push.sh
 env:
