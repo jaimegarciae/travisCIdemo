@@ -16,7 +16,7 @@ commit_files() {
 
 upload_files() {
     git remote add origin https://${GH_TOKEN}@github.com/irfanhasan/travisCIcache.git 
-    git push -u origin master
+    git push origin master
 }
 
 setup_git
