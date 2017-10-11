@@ -6,14 +6,13 @@ setup_git() {
 }
 
 commit_files() {
-    git checkout -b gh-pages
-    git add .ekstazi/*
-    git commit -m "Travis build: $TRAVIS_BUILD_NUMBER"
+    git add -f .ekstazi/*
+    git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
     git remote add origin-pages https://${GH_TOKEN}@github.com/irfanhasan/travisCIcache.git 
-    git push --quiet --set-upstream origin-pages gh-pages
+    git push -u origin-pages master
 }
 
 setup_git
