@@ -9,14 +9,16 @@ setup_git() {
 commit_files() {
     cd temp
     git init
+    git remote add origin https://${GH_TOKEN}@github.com/irfanhasan/travisCIcache.git 
+    git pull origin master
+    rm -r .ekstazi/
     cp -R ../.ekstazi/ .ekstazi/
     git add -f .ekstazi/*
     git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
-    git remote add origin https://${GH_TOKEN}@github.com/irfanhasan/travisCIcache.git 
-    git push origin master
+    git push -u origin master
 }
 
 setup_git
