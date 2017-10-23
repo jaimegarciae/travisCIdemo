@@ -1,4 +1,5 @@
 language: java
+sudo: enabled
 before_script:
     - bash pull.sh
 after_success:
